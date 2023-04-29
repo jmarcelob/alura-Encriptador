@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<script type="text/javascript" src="Encriptador_Home.js"></script>
+		<script type="text/javascript" src="Desencriptador.js"></script>
+	</head>
+
+	<body>
+		<img class="Logo"  src="Imagenes/Logo.png" id="Logo">
+
+		<main>
+			<form>
+				<textarea cols="70" rows="10" id="Texto" class="input-padron" required placeholder="Ingrese texto aqui...."></textarea>
+			</form>
+
+			<section class="TextEncript">
+				<textarea cols="70" rows="10" id="Texto-Desencriptado" class="input-padron-des" required placeholder="Texto desencriptado....">
+				</textarea>
+				<button type="submit" id="Copiar" onclick="Copy()">Copiar</button>
+			</section>
+
+			<section class="advertencia">
+				<span class="material-symbols-outlined">error</span>
+				<p class="texto-advertencia">Solo letras minúsculas y sin acentos</p>
+			</section>
+
+			<nav>
+				<ul class="botones">
+	                <li><button type="submit" id="Encriptar" onclick="encript()">Encriptar</button></li>
+	                <li><button type="submit" id="Desencriptar" onclick="desencript()">Desencriptar</button></li>
+	            </ul>
+			</nav>
+			
+		</main>
+
+	</body>
+
+
+	<script>
+        document.getElementById("Encriptar").addEventListener("click", redirectFunction);
+        document.getElementById("Desencriptar").addEventListener("click", redirectFunction);
+        document.getElementById("Logo").addEventListener("click", goHome);
+
+        function redirectFunction(){
+            window.location.href = "Desencriptador.html";
+        }
+
+        function goHome(){
+        	window.location.href = "Encriptador_Home.html";
+        }
+
+    </script>
+
+
+
+
+</html>
